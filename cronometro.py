@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'cronometro.ui'
-#
-# Created by: PyQt5 UI code generator 5.12
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -90,17 +82,7 @@ class Ui_MainWindow(object):
         self.listWidget.addItem(
             "{0} hour {1} min {2} sec".format(str(self.count // 3600), str(int((self.count % 3600) / 60)),
                                               str(self.count % 60)))
-        # if self.count/60 <= 1:
-        #     self.listWidget.addItem(str(self.count) + " sec")
-        # elif self.count/60 > 1 >= self.count/3600:
-        #     self.listWidget.addItem(str(self.count//60) + " min " + str(self.count%60) + " sec")
-        # elif self.count/3600 > 1:
-        #     self.listWidget.addItem(str(self.count//3600) + " hour " + str(int((self.count%3600)/60)) + " min " \
-        #                             + str(self.count%60) + " sec")
-        #     self.listWidget.addItem(
-        #         "{0} hour {1} min {2} sec".format(str(self.count // 3600), str(int((self.count % 3600) / 60)),
-        #                                           str(self.count % 60)))
-
+        
         self.timer.stop()
         self.count = 0
         self.lcdNumber.display(self.count)
